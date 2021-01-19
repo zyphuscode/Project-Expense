@@ -20,8 +20,8 @@ main {
 
 .glass{
   background: white;
-  min-height: 95vh;
-  width: 60%;
+  min-height: 75vh;
+  width: 55%;
   background: linear-gradient(to right bottom, rgba(255,255,255,0.5),
    rgba(255,255,255,0.5));
   border-radius: 2rem;
@@ -29,7 +29,7 @@ main {
   backdrop-filter: blur(2rem);
   font-family: "Lato", sans-serif;
   display: flex;
-  
+
 }
 
 .circle1, .circle2{
@@ -52,12 +52,16 @@ left:10%;
 }
 
 .container {
-  margin: auto;
-  width: 300px;
+  margin: 10px;
+  width: 60%;
+  flex: 3;
 }
 
 h2 {
-  text-align: center;
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 3rem;
 }
 
 h1 {
@@ -69,11 +73,15 @@ h3 {
   border-bottom: 1px solid #527ffa;
   padding-bottom: 10px;
   margin: 40px 0 10px;
+  color: #426696;
 }
 
 h4 {
-  margin: 0;
+  margin: 5px;
   text-transform: uppercase;
+  color: #426696;
+
+  
 }
 
 .inc-exp-container{
@@ -100,6 +108,7 @@ h4 {
   margin: 5px 0;
 }
 
+
 .money.plus {
   color: #49ed8d;
 }
@@ -111,6 +120,10 @@ h4 {
 label {
   display: inline-block;
   margin: 10px 0;
+  color: #0450ba;
+  font-weight: 500;
+  /*opacity: 0.8;*/
+
 }
 
 input[type="text"], input[type="number"] {
@@ -119,7 +132,10 @@ input[type="text"], input[type="number"] {
   padding: 10px;
   display: block;
   font-size: 16px;
-  width: 100%
+  width: 100%;
+
+  
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.1));
 }
 
 .btn {
@@ -150,6 +166,8 @@ input[type="text"], input[type="number"] {
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
+
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.1));
 }
 
 .list li.plus {
@@ -170,15 +188,53 @@ input[type="text"], input[type="number"] {
   padding: 2px 5px;
   position: absolute;
   top: 50%;
-  left: 0;
-  transform:  translate(-100%, -50%);
+  right: 0;
+  transform:  translate(90%, -250%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  margin-left: 10px;
+  border-radius: 5px;
 }
 
 .list li:hover .delete-btn {
   opacity: 1;
 }
+
+.dashboard {
+  
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.1));
+  align-items:center;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 2rem;
+  width: 20px;
+ /* padding: ; */
+  flex: 1;
+}
+
+.dashboard img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+}
+
+.links{
+  align-items: center;
+}
+
+.links p {
+  line-height: 30px;
+  color: #426696;
+}
+
+.dashboard h4 {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
 
 
 
