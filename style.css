@@ -3,3 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #527ffa, #6c89e2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass{
+  background: white;
+  min-height: 95vh;
+  width: 60%;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+  border-radius: 2rem;
+}
+
+.circle1, .circle2{
+  
+}
