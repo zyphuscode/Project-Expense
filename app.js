@@ -5,6 +5,8 @@ const list = document.getElementById("list");
 const form = document.getElementById("form");
 const text = document.getElementById("text");
 const amount = document.getElementById("amount");
+const deletebtn = document.getElementById("delete");
+
 
 //const dummyTransactions = [
  // {id: 1, text: "flower", amount: -20},
@@ -24,6 +26,8 @@ let transactions = localStorage.getItem("transaction") !== null ? localStorageTr
 function init(){
   list.innerHTML = " ";
   transactions.forEach(addTransactionDOM);
+
+  updateValues();
 }
 
 init();
@@ -37,8 +41,8 @@ function addTransactionDOM(transaction){
 
   item.innerHTML = `
   ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
-  <button class="delete-btn">x</button>
-  `
+  <button class="delete-btn" onclick="removeTransaction(${transaction.id})">x</button>
+  `;
  list.appendChild(item);
 
 }
@@ -49,11 +53,11 @@ function addNewTransaction(e) {
 
   //If else to check if the text and amount values are empty or not
   if(text.value.trim() === "" || amount.value.trim === " "){
-
     alert("Please add a text and amount");
   } else {
+    //creating a new transaction object
     const transaction = {
-      id: generateId,
+      id: generateId(),
       text: text.value,
       amount: +amount.value
     }
@@ -64,6 +68,9 @@ function addNewTransaction(e) {
 
     //updateValues
     updateValues();
+
+    //update local storage
+    updateLocalStorage();
 
     text.value= " ";
     amount.value = " ";
@@ -86,13 +93,33 @@ function updateValues(){
   console.log(amounts);
   console.log(total);
   console.log(income);
-  console.log(expense);              
+  console.log(expense); 
+
+  //Showing the actual values in the dom
+  balance.innerHTML = `$${total}`;
+  money_plus.innerHTML = `$${income}`;
+  money_minus.innerHTML = `$${expense}`;           
+}
+
+//6 removing transaction from the dom and also local storage
+function removeTransaction(id) {
+  transactions = transactions.filter(transaction => transaction.id !== id);
+  
+updateLocalStorage();
+
+  init();
+}
+
+//7 Update localStorage transactions
+function updateLocalStorage(){
+  localStorage.setItem("transactions", JSON.stringify(transactions));
 }
 
 
 
-//4 Generate random id
+//4 Generate random id for the transaction object
 function generateId(){
-  return Math.floor(Math.random() * 10000000);
+  return Math.floor(Math.random() *  100000000);
 }
 form.addEventListener("submit", addNewTransaction);
+deletebtn.addEventListener("click", removeTransaction);

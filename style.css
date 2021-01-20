@@ -197,14 +197,14 @@ input[type="text"], input[type="number"] {
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
-  position: absolute;
-  top: 55%;
-  right: 0;
-  transform:  translate(100%, -200%);
+  position: absolute; 
+  top: 50%;
+  left: 100;
+  transform:  translate(-100%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  margin-left: 10px;
   border-radius: 5px;
+
 }
 
 .list li:hover .delete-btn {
