@@ -197,10 +197,12 @@ input[type="text"], input[type="number"] {
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
-  position: absolute; 
-  top: 50%;
-  left: 100;
-  transform:  translate(-100%, -50%);
+ /* float: right;*/
+ /* justify-content:right;*/
+ /*  margin-right: -90px;*/
+ /* top: 50%; */
+   margin-left: -189px;
+  transform:  translate(250%, -10%);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 5px;
