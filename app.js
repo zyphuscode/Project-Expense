@@ -65,9 +65,32 @@ function addNewTransaction(e) {
     //updateValues
     updateValues();
 
-    
+    text.value= " ";
+    amount.value = " ";
   }
 }
+
+//5 update the balance and expense/income
+function updateValues(){
+  const amounts = transactions.map(transaction => transaction.amount);
+
+  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+
+  const income = amounts
+                .filter(item => item > 0)
+                .reduce((acc, item) => (acc += item),0).toFixed(2);
+  const expense =  (amounts
+                    .filter(item => item < 0)
+                    .reduce((acc, item) => (acc += item), 0) *-1).toFixed(2);
+                    
+  console.log(amounts);
+  console.log(total);
+  console.log(income);
+  console.log(expense);              
+}
+
+
+
 //4 Generate random id
 function generateId(){
   return Math.floor(Math.random() * 10000000);
