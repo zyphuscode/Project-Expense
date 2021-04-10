@@ -122,4 +122,4 @@ function generateId(){
   return Math.floor(Math.random() *  100000000);
 }
 form.addEventListener("submit", addNewTransaction);
-deletebtn.addEventListener("click", removeTransaction);
+//deletebtn.addEventListener("click", removeTransaction);
