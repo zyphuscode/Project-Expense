@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root {
-  --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --box-shadow: 0 1px 3px rgba(114, 98, 98, 0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 *{
@@ -12,18 +12,18 @@
 
 main {
   min-height: 100vh;
-  background: linear-gradient(to right top, #527ffa, #6c89e2);
+  background: linear-gradient(to right top, #0a0a0b, #0d0d0e);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .glass{
-  background: white;
+  background: rgb(108, 104, 104);
   min-height: 70vh;
   width: 55%;
-  background: linear-gradient(to right bottom, rgba(255,255,255,0.5),
-   rgba(255,255,255,0.5));
+  background: linear-gradient(to right bottom, rgba(57, 47, 47, 0.5),
+   rgba(85, 76, 76, 0.5));
   border-radius: 2rem;
   z-index: 2;
   backdrop-filter: blur(2rem);
@@ -33,8 +33,8 @@ main {
 }
 
 .circle1, .circle2{
-  background: white;
-  background: linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.1));
+  background: rgb(58, 51, 51);
+  background: linear-gradient(to right bottom, rgba(108, 102, 102, 0.9), rgba(255,255,255,0.1));
   height: 10rem;
   width: 10rem;
   position: absolute;
@@ -59,11 +59,11 @@ left:10%;
 }
 
 h2 {
-  color: #426696;
+  color: #ff1eec;
   font-weight: 600;
   opacity: 0.8;
   text-align: center;
-  border-bottom: 1px solid #527ffa;
+  border-bottom: 1px solid #f252fa;
   padding-bottom: 10px;
   font-size: 2rem;
 }
@@ -74,10 +74,10 @@ h1 {
 }
 
 h3 {
-  border-bottom: 1px solid #527ffa;
+  border-bottom: 1px solid #fa52e6;
   padding-bottom: 10px;
   margin: 40px 0 10px;
-  color: #426696;
+  color: #fe0acd;
 }
 
 .container h4{
@@ -87,13 +87,13 @@ h3 {
 h4 {
   margin: 5px;
   text-transform: uppercase;
-  color: #426696;
+  color: #f214eb;
 
   
 }
 
 .inc-exp-container{
-  background-color: #809bee;
+  background-color: #f532e5;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -130,14 +130,14 @@ h4 {
 label {
   display: inline-block;
   margin: 10px 0;
-  color: #0450ba;
+  color: #e314f5;
   font-weight: 500;
   /*opacity: 0.8;*/
 
 }
 
 input[type="text"], input[type="number"] {
-  border: 1px solid #809bee;
+  border: 1px solid #fa14f3;
   border-radius: 5px;
   padding: 10px;
   display: block;
@@ -145,12 +145,12 @@ input[type="text"], input[type="number"] {
   width: 100%;
 
   
-  background: linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.1));
+  background: linear-gradient(to right bottom, rgba(53, 48, 48, 0.9), rgba(87, 80, 80, 0.1));
 }
 
 .btn {
   cursor: pointer;
-  background-color:#527ffa;
+  background-color:#f252fa;
   box-shadow: var(--box-shadow);
   color: white;
   display: block;
@@ -159,7 +159,7 @@ input[type="text"], input[type="number"] {
   padding: 10px;
   width: 100%;
   border-radius: 5px;
-  border:#809bee;
+  border:#f911f9;
 }
 
 .list{
@@ -169,7 +169,7 @@ input[type="text"], input[type="number"] {
 }
 
 .list li {
-  background-color: white; 
+  background-color: rgb(109, 101, 101); 
   box-shadow: var(--box-shadow);
   color: #333;
   display: flex;
@@ -178,7 +178,7 @@ input[type="text"], input[type="number"] {
   margin: 10px 0;
   border-radius: 5px;
 
-  background: linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.1));
+  background: linear-gradient(to right bottom, rgba(79, 74, 74, 0.9), rgba(55, 50, 50, 0.1));
 }
 
 .list li.plus {
@@ -244,7 +244,7 @@ input[type="text"], input[type="number"] {
 
 .links p {
   line-height: 30px;
-  color: #426696;
+  color: #fc10fc;
 }
 
 .dashboard h4 {
